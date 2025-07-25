@@ -1,0 +1,27 @@
+    import java.util.Arrays;
+    import java.util.ArrayList;
+
+    public class Main {
+        public static void main(String[] args) {
+            //Instantiates arrays before expansion and array after expansion
+            //Adds int type primitive data
+            int[] arrayBefore = {5, 4, 3, 2, 1};
+            int[] arrayAfter = new int[7];
+            System.out.println(Arrays.toString(arrayBefore));
+            //Copy data position by position using the length of the arrayBefore to determine number of positions to copy.
+            System.arraycopy(arrayBefore, 0, arrayAfter, 0, arrayBefore.length);
+            System.out.println(Arrays.toString(arrayAfter));
+
+            //Instantiates arraylist for dynamic expansion example
+            ArrayList<Integer> arrayMutable = new ArrayList<>();
+            //Adds 3 elements to array and print
+            //Uses methods specifically built for arrayLists imported from java.util.ArrayList class
+            arrayMutable.add(5);
+            arrayMutable.add(4);
+            arrayMutable.add(3);
+            System.out.println(arrayMutable);
+            //Add 1 more element and print
+            arrayMutable.add(2);
+            System.out.println(arrayMutable);
+        }
+    }
